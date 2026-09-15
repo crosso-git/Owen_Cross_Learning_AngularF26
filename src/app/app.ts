@@ -9,4 +9,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Owen-Cross-Learning-AngularF26');
+  variable1: number = 10;
+  variable2: boolean = true;
 }
