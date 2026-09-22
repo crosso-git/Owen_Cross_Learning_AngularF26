@@ -8,4 +8,4 @@ export interface Weapon {
   sharpness?: number;
   affinity: number;
   series: string;
-} q
+}
