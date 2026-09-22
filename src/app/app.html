@@ -4,8 +4,21 @@
   <title>Angular F26 Page</title>
 </header>
 <body>
-  <h1>I got nothing.</h1>
-  <p>Here's a variable: {{ variable1 }}</p>
-  <p>Here's another variable: {{ variable2 }}</p>
+  <div class="container">
+    <h1>oh lord i hope this works</h1>
+    @for (weapon of weaponList; track weapon.id) {
+        <div class="array">
+          <h2>{{ weapon.name }}</h2>
+          <p>Type: {{ weapon.kind }}</p>
+          <p>Rarity: {{ weapon.rarity }}</p>
+          <p>Damage Value: {{ weapon.damage }}</p>
+          @if (weapon.special) {<p>Special: {{ weapon.special }}</p>}
+          <p>Affinity: {{ weapon.affinity }}</p>
+          <p>Weapon Series: {{ weapon.series }}</p>
+        </div>
+    } @empty {
+      <h2>There is nothing to display.</h2>
+    }
+  </div>
 </body>
 </html>

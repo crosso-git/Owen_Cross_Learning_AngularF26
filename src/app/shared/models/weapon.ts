@@ -5,7 +5,6 @@ export interface Weapon {
   rarity: number | string;
   damage: number;
   special?: string;
-  sharpness?: number;
   affinity: number;
   series: string;
 }
