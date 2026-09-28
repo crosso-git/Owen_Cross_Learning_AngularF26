@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, input} from '@angular/core';
+import {Weapon} from '../shared/models/weapon';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './weapon-list-item.css',
   templateUrl: './weapon-list-item.html',
 })
-export class WeaponListItem {}
+export class WeaponListItem {
+  item1 = input.required<Weapon>();
+}
