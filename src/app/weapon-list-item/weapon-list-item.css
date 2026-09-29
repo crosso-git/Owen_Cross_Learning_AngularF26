@@ -1,3 +1,4 @@
-p, span { border: 2px hidden black; }
+h2, p, span { border: 2px hidden black; }
 
-h2 { border: 2px solid black; }
+div { border: 2px solid black }
+
