@@ -8,5 +8,5 @@ import {Weapon} from '../shared/models/weapon';
   templateUrl: './weapon-list-item.html',
 })
 export class WeaponListItem {
-  item1 = input.required<Weapon>();
+  weapon = input.required<Weapon>();
 }

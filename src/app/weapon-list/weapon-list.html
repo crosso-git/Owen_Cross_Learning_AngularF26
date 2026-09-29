@@ -1,1 +1,16 @@
-<p>weapon-list works!</p>
+<html lang="en">
+<header>
+  <title>List</title>
+</header>
+<body>
+  <h1>Weapon List Display Page</h1>
+
+  <div class="list">
+    @for(weapon of weaponList; track weapon.id) {
+      <app-weapon-list-item [weapon]="weapon"></app-weapon-list-item>
+    } @empty {
+      <p>Nothing to display.</p>
+    }
+  </div>
+</body>
+</html>

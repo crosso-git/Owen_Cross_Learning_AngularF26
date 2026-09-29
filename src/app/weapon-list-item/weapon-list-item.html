@@ -1,1 +1,31 @@
-<p>weapon-list-item works!</p>
+<div class="weapon-card">
+  <h2>{{ weapon().name }}</h2>
+  <!-- oh my god i have to do a switch statement with fifteen cases what the hell am i thinking -->
+  @switch(weapon().kind) {
+    @case ('great-sword') { <span class="badge">Great Sword</span> }
+    @case ('long-sword') { <span class="badge">Long Sword</span> }
+    @case ('sword-and-shield') { <span class="badge">Sword and Shield</span> }
+    @case ('dual-blades') { <span class="badge">Dual Blades</span> }
+    @case ('hammer') { <span class="badge">Hammer</span> }
+    @case ('hunting-horn') { <span class="badge">Hunting Horn</span> }
+    @case ('lance') { <span class="badge">Lance</span> }
+    @case ('gunlance') { <span class="badge">Gunlance</span> }
+    @case ('switch-axe') { <span class="badge">Switch Axe</span> }
+    @case ('charge-blade') { <span class="badge">Charge Blade</span> }
+    @case ('insect-glaive') { <span class="badge">Insect Glaive</span> }
+    @case ('light-bowgun') { <span class="badge">Light Bowgun</span> }
+    @case ('heavy-bowgun') { <span class="badge">Heavy Bowgun</span> }
+    @case ('bow') { <span class="badge">Bow</span> }
+    @default { <span class="badge">Unspecified</span> }
+  }
+  <!-- I may be insane -->
+  <p>Rarity: {{ weapon().rarity }}</p>
+  <p>Damage: {{ weapon().damage }}</p>
+  @if (weapon().special) {
+    <p>Special: {{ weapon().special }}</p>
+  } @else {
+    <p>No special attribute</p>
+  }
+  <p>Affinity: {{ weapon().affinity }}</p>
+  <p>{{ weapon().series }}</p>
+</div>
