@@ -8,7 +8,7 @@
   <div class="list">
     <h2>Main List</h2>
     @for(weapon of weaponList(); track weapon.id) {
-      <app-weapon-list-item [weapon]="weapon" (opened)="removeItem($event)"></app-weapon-list-item>
+      <app-weapon-list-item [weapon]="weapon"></app-weapon-list-item>
     } @empty {
       <p>Nothing to display.</p>
     }

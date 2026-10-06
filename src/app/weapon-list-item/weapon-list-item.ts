@@ -1,5 +1,6 @@
-import {Component, input, output} from '@angular/core';
+import {Component, inject, input, output} from '@angular/core';
 import {Weapon} from '../shared/models/weapon';
+import {WeaponService} from '../services/weapon-service';
 
 @Component({
   imports: [],
@@ -12,9 +13,17 @@ export class WeaponListItem {
   expanded = false;
   opened = output<number>();
 
+  //WANT SERVICE
+  private weaponService = inject(WeaponService);
+
+  //Toggles what is visible and also emits the id of what gets opened/closed
   toggle(): void {
     this.expanded = !this.expanded;
     this.opened.emit(this.weapon().id);
   }
-  //ok actually screw this output whatever crap it's not working and i can't figure out why so i'm not doing it right now
+
+  //button
+  removeItem(id: number) {
+    this.weaponService.remove(id);
+  }
 }

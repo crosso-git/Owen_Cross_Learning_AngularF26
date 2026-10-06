@@ -22,11 +22,4 @@ export class WeaponList {
 
   //also the number of special weapons
   numSpecials = this.weaponService.numSpecials;
-
-  //output handler that... destroys anything we click on?
-  //okay so this kind of super conflicts with the whole "click to open item" thing so like-
-  //hwat does it supposed to do?????
-  removeItem(id: number) {
-    this.weaponService.remove(id);
-  }
 }
