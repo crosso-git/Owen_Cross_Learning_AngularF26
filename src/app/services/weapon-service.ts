@@ -19,9 +19,19 @@ export class WeaponService {
     this.weapons.update(list => [...list, newWeapon]);
   }
 
+  //method that destroys an item (with hammers) (somehow)
+  remove(id: number): void {
+    this.weapons.update(list => list.filter(x => x.id !== id));
+  }
+
   //and now the filtered computed list thing:
   weaponsWithSpecial = computed(
     () => this.weapons().filter(x => x.special)
+  );
+
+  //and ANOTHER computor who counts how many special weapons there are
+  numSpecials = computed(
+    () => this.weaponsWithSpecial().length
   );
 
   //and the effect that counts how many things are in the list (I think I need to put this in a constructor???)
