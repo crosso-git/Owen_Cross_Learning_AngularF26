@@ -16,4 +16,7 @@ export class WeaponList {
 
   //want list
   weaponList = this.weaponService.weaponList;
+
+  //other list
+  specialWeaponList = this.weaponService.weaponsWithSpecial;
 }
