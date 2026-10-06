@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Weapon } from '../shared/models/weapon';
+import {Component, inject} from '@angular/core';
 import {WeaponListItem} from '../weapon-list-item/weapon-list-item';
+import {WeaponService} from '../services/weapon-service';
 
 @Component({
   imports: [
@@ -11,5 +11,9 @@ import {WeaponListItem} from '../weapon-list-item/weapon-list-item';
   templateUrl: './weapon-list.html',
 })
 export class WeaponList {
+  //want service
+  private weaponService = inject(WeaponService);
 
+  //want list
+  weaponList = this.weaponService.weaponList;
 }
