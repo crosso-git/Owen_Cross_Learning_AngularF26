@@ -8,5 +8,5 @@ export interface Weapon {
   affinity: number;
   series: string;
   //specifies the file route to image
-  image: string;
+  image?: string;
 }

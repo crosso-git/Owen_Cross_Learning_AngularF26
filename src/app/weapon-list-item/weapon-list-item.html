@@ -29,6 +29,8 @@
     }
     <p>Affinity: {{ weapon().affinity }}</p>
     <p>{{ weapon().series }}</p>
-    <img src="{{ weapon().image }}" alt="Weapon Image" height="512" width="512">
+    @if(weapon().image) {
+      <img src="{{ weapon().image }}" alt="Weapon Image" height="512" width="512">
+    }
   }
 </div>

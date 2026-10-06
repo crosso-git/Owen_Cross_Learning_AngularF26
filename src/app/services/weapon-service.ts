@@ -9,7 +9,8 @@ export class WeaponService {
     {id: 3, name: 'Hope Blade II', kind: 'great-sword', rarity: 1, damage: 480, affinity: 0, series: 'Expedition Tree', image: './assets/MHWilds-Esperanza_Blade_Render_001.webp'},
     {id: 4, name: 'Valkyrie Fire I', kind: 'light-bowgun', rarity: 5, damage: 208, affinity: 15, series: 'Rathian Tree', image: './assets/MHWilds-Valkyrie_Fire_Render_001.webp'},
     {id: 5, name: 'G. Veldian Hasta II', kind: 'gunlance', rarity: 6, damage: 483, special: 'Dragon', affinity: -10, series: 'G. Arkveld Tree', image: './assets/MHWilds-G._Lawful_Bors_Render_001.webp'},
-    {id: 6, name: 'Zoh Mikal I', kind: 'sword-and-shield', rarity: 'Purple', damage: 294, special: 'Dragon', affinity: 5, series: 'Zoh Shia Tree', image: './assets/MHWilds-Blazing_Mikal_Render_001.webp'}
+    {id: 6, name: 'Zoh Mikal I', kind: 'sword-and-shield', rarity: 'Purple', damage: 294, special: 'Dragon', affinity: 5, series: 'Zoh Shia Tree', image: './assets/MHWilds-Blazing_Mikal_Render_001.webp'},
+    {id: 7, name: 'Deafening Fulgur I', kind: 'hunting-horn', rarity: 6, damage: 756, special: 'Thunder', affinity: 15, series: 'G. Fulgur Tree'}
   ]);
 
   weaponList = this.weapons.asReadonly();
