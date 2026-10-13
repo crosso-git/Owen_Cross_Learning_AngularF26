@@ -17,9 +17,13 @@ export class WeaponList {
   //want list
   weaponList = this.weaponService.weaponList;
 
-  //other list
+  //special list
   specialWeaponList = this.weaponService.weaponsWithSpecial;
 
   //also the number of special weapons
   numSpecials = this.weaponService.numSpecials;
+
+  //and all the config stuff because i don't think I can read that directly
+  configApi = this.weaponService.configApi;
+  configDefaultKind = this.weaponService.configDefaultKind;
 }
