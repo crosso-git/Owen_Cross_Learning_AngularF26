@@ -33,6 +33,7 @@
       <img src="{{ weapon().image }}" alt="Weapon Image" height="512" width="512">
     }
     <br/>
+    <a [routerLink]="['/weapons', weapon().id]">Details</a>
     <!-- button to delete instead of the stupid thing I was doing before -->
     <button (click)="removeItem(weapon().id)">Remove Item</button>
   }

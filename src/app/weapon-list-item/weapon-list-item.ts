@@ -1,9 +1,12 @@
 import {Component, inject, input, output} from '@angular/core';
 import {Weapon} from '../shared/models/weapon';
 import {WeaponService} from '../services/weapon-service';
+import {RouterLink} from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   selector: 'app-weapon-list-item',
   styleUrl: './weapon-list-item.css',
   templateUrl: './weapon-list-item.html',
