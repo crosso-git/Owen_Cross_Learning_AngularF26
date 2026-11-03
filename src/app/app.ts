@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import { WeaponList } from './weapon-list/weapon-list';
 
 @Component({
-  imports: [RouterOutlet, WeaponList],
+  imports: [RouterOutlet, WeaponList, RouterLink, RouterLinkActive],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

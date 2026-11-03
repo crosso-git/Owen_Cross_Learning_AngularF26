@@ -6,6 +6,7 @@ import {WeaponForm} from './weapon-form/weapon-form';
 export const routes: Routes = [
   {path: '', redirectTo: '/weapons', pathMatch: 'full'},
   {path: 'weapons', component: WeaponList},
+  {path: 'weapons/add', component: WeaponForm},
   {path: 'weapons/:id',  component: WeaponDetail},
   {path: 'weapons/edit/:id', component: WeaponForm},
 ];

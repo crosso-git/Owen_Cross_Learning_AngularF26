@@ -14,6 +14,8 @@ export class WeaponForm {
   private service = inject(WeaponService);
   private form = inject(FormBuilder);
 
+  id = input.required<string>();
+
   weaponForm = this.form.group({
     name: ['', Validators.required],
     kind: ['', Validators.required],
@@ -24,6 +26,13 @@ export class WeaponForm {
     series: ['', Validators.required],
     image: ['']
   });
+
+  /**
+   * TODO setup a constructor and use exceptions to try to cast to a num and to
+   * look up if its a valid id.
+   *
+   * I do the same thing in my file
+   */
 
   onSubmit(): void {
     if (this.weaponForm.invalid) return;
