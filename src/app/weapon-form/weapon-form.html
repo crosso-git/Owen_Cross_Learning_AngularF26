@@ -1,0 +1,50 @@
+<html>
+
+<form [formGroup]="weaponForm" (ngSubmit)="onSubmit()">
+
+  <input formControlName="name" placeholder="Name (required)" />
+  @if(weaponForm.controls.name.touched && weaponForm.controls.name.invalid) {
+    <p class="error">A name is required.</p>
+  }
+  <select formControlName="kind">
+    <option value="great-sword">Great sword</option>
+    <option value="long-sword">Long sword</option>
+    <option value="sword-and-shield">Sword and Shield</option>
+    <option value="dual-blades">Dual Blades</option>
+    <option value="hammer">Hammer</option>
+    <option value="hunting-horn">Hunting-Horn</option>
+    <option value="lance">Lance</option>
+    <option value="gunlance">Gunlance</option>
+    <option value="switch-axe">Switch Axe</option>
+    <option value="charge-blade">Charge Blade</option>
+    <option value="insect-glaive">Insect Glaive</option>
+    <option value="light-bowgun">Light Bowgun</option>
+    <option value="heavy-bowgun">Heavy Bowgun</option>
+    <option value="bow">Bow</option>
+  </select>
+  @if(weaponForm.controls.kind.touched && weaponForm.controls.kind.invalid) {
+    <p class="error">A selection is required.</p>
+  }
+  <input formControlName="rarity" placeholder="Rarity (required)" />
+  @if(weaponForm.controls.rarity.touched && weaponForm.controls.rarity.invalid) {
+    <p class="error">A single-digit value is required.</p>
+  }
+  <input formControlName="damage" placeholder="Damage (required)" />
+  @if(weaponForm.controls.damage.touched && weaponForm.controls.damage.invalid) {
+    <p class="error">A damage value is required.</p>
+  }
+  <input formControlName="special" placeholder="Special" />
+  <input formControlName="affinity" placeholder="Affinity (required)" />
+  @if(weaponForm.controls.affinity.touched && weaponForm.controls.affinity.invalid) {
+    <p class="error">A value less than 4 characters is required.</p>
+  }
+  <input formControlName="series" placeholder="Series (required)" />
+  @if(weaponForm.controls.series.touched && weaponForm.controls.series.invalid) {
+    <p class="error">A series name is required</p>
+  }
+
+  <button type="submit" [disabled]="weaponForm.invalid">Submit Entry</button>
+
+</form>
+
+</html>
