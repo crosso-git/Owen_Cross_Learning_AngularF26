@@ -24,4 +24,7 @@ export class WeaponDetail {
   back(): void {
     this.router.navigate(['/weapons']);
   }
+  edit(): void {
+    this.router.navigate(['/weapons/edit', this.id]);
+  }
 }
