@@ -29,11 +29,18 @@
   @if(weaponForm.controls.rarity.touched && weaponForm.controls.rarity.invalid) {
     <p class="error">A single-digit value is required.</p>
   }
-  <input formControlName="damage" placeholder="Damage (required)" />
-  @if(weaponForm.controls.damage.touched && weaponForm.controls.damage.invalid) {
+  <input formControlName="rawDamage" placeholder="Raw damage (required)" />
+  @if(weaponForm.controls.rawDamage.touched && weaponForm.controls.rawDamage.invalid) {
     <p class="error">A damage value is required.</p>
   }
-  <input formControlName="special" placeholder="Special" />
+  <input formControlName="displayDamage" placeholder="Display damage (required)" />
+  @if(weaponForm.controls.displayDamage.touched && weaponForm.controls.displayDamage.invalid) {
+    <p class="error">A damage value is required.</p>
+  }
+  <input formControlName="nameSpecial" placeholder="Special Name" />
+  <input formControlName="kindSpecial" placeholder="Special Type" />
+  <input formControlName="specialRawDamage" placeholder="Special Raw Damage" />
+  <input formControlName="specialDisplayDamage" placeholder="Special Display Damage" />
   <input formControlName="affinity" placeholder="Affinity (required)" />
   @if(weaponForm.controls.affinity.touched && weaponForm.controls.affinity.invalid) {
     <p class="error">A value less than 4 characters is required.</p>

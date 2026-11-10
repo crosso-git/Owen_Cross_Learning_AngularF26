@@ -20,8 +20,12 @@ export class WeaponForm {
     name: ['', Validators.required],
     kind: ['', Validators.required],
     rarity: ['', Validators.required, Validators.maxLength(1)],
-    damage: ['', Validators.required],
-    special: [''],
+    rawDamage: ['', Validators.required],
+    displayDamage: ['', Validators.required],
+    nameSpecial: [''],
+    kindSpecial: [''],
+    specialRawDamage: [''],
+    specialDisplayDamage: [''],
     affinity: ['', Validators.required, Validators.maxLength(3)],
     series: ['', Validators.required],
     image: ['']
@@ -44,10 +48,11 @@ export class WeaponForm {
       name: String(value.name),
       kind: String(value.kind),
       rarity: Number(value.rarity),
-      damage: Number(value.damage),
-      special: String(value.special),
+      damage: { raw : Number(value.rawDamage), display : Number(value.displayDamage) },
+      special: [ String(value.nameSpecial), String(value.kindSpecial),
+        { raw : Number(value.specialRawDamage), display : Number(value.specialDisplayDamage) }],
       affinity: Number(value.affinity),
-      series: String(value.series)
+      series: { name: String(value.series) }
     });
     this.weaponForm.reset();
   }

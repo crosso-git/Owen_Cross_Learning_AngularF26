@@ -11,6 +11,7 @@ export class MockWeaponService {
   configApi = signal<string>(this.config.apiBaseUrl).asReadonly();
   configDefaultKind = signal<string>(this.config.defaultKind).asReadonly();
 
+  /*
   private weapons = signal<Weapon[]>([
     {
       id: 1,
@@ -64,5 +65,8 @@ export class MockWeaponService {
     );
   }
 }
+*/
 
-export default MockWeaponService
+}
+
+export default MockWeaponService;
