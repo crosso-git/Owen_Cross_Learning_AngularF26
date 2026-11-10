@@ -12,7 +12,7 @@ export const appConfig: ApplicationConfig = {
     {
       provide: APP_CONFIG,
       useValue: {
-        apiBaseUrl: 'https://fake.api.com/what',
+        apiBaseUrl: 'https://wilds.mhdb.io/en',
         defaultKind: 'great-sword'
     }},
     {
