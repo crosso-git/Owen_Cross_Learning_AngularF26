@@ -65,3 +65,5 @@ Connected to https://wilds.mhdb.io
 Documentation found at https://docs.wilds.mhdb.io/
 
 Example URL: https://wilds.mhdb.io/en/weapons?limit=10&offset=0
+
+Implemented utilizing httpResource, because I thought it looked easier than the alternative. That's the only reason. Literally.
