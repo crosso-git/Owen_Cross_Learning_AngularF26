@@ -57,3 +57,11 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## API Connection
+
+Connected to https://wilds.mhdb.io
+
+Documentation found at https://docs.wilds.mhdb.io/
+
+Example URL: https://wilds.mhdb.io/en/weapons?limit=10&offset=0
