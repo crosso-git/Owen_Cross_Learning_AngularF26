@@ -29,4 +29,6 @@ export class WeaponListItem {
   removeItem(id: number) {
     this.weaponService.remove(id);
   }
+
+  protected readonly Array = Array;
 }

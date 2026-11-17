@@ -21,14 +21,20 @@
     }
     <!-- I may be insane -->
     <p>Rarity: {{ weapon().rarity }}</p>
-    <p>Damage: {{ weapon().damage }}</p>
-    @if (weapon().special) {
-      <p>Special: {{ weapon().special }}</p>
+    <p>Damage:</p>
+    <p style="text-indent: 2em">Raw: {{ weapon().damage.raw }}</p>
+    <p style="text-indent: 2em">Display: {{ weapon().damage.display }}</p>
+    @if (weapon().special != null) {
+      <p>Special:</p>
+      <p style="text-indent: 2em">Type: {{ weapon().special }}</p>
+      <p style="text-indent: 2em">Damage:</p>
+      <p style="text-indent: 4em">Raw: {{ weapon().special }}</p>
+      <p style="text-indent: 4em">Display: {{ weapon().special }}</p>
     } @else {
       <p>No special attribute</p>
     }
     <p>Affinity: {{ weapon().affinity }}</p>
-    <p>{{ weapon().series }}</p>
+    <p>{{ weapon().series.name }}</p>
     @if(weapon().image) {
       <img src="{{ weapon().image }}" alt="Weapon Image" height="512" width="512">
     }

@@ -14,7 +14,7 @@ export class WeaponService {
 
   private contentResource = httpResource<Weapon[]>(() => ({
     url: `${this.config.apiBaseUrl}/weapons`,
-    params: { limit: 20 }
+    params: { limit: 20, offset: 50 }
   }), { defaultValue: [] });
 
   private weapons = this.contentResource.value;
