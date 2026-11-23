@@ -2,12 +2,14 @@ import {Component, inject} from '@angular/core';
 import {WeaponListItem} from '../weapon-list-item/weapon-list-item';
 import {WeaponService} from '../services/weapon-service';
 import {RouterLink, RouterLinkActive} from '@angular/router';
+import {DecimalPipe} from '@angular/common';
 
 @Component({
   imports: [
     WeaponListItem,
     RouterLinkActive,
-    RouterLink
+    RouterLink,
+    DecimalPipe
   ],
   selector: 'app-weapon-list',
   styleUrl: './weapon-list.css',

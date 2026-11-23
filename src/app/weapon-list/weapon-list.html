@@ -16,7 +16,7 @@
   </div>
   <br/><br/>
   <div class="list">
-    <h2>Weapons with Special: {{ numSpecials() }}</h2>
+    <h2>Weapons with Special: {{ numSpecials() | number }}</h2>
     @for(weapon of specialWeaponList(); track weapon.id) {
       <app-weapon-list-item [weapon]="weapon"></app-weapon-list-item>
     } @empty {
